@@ -1,1 +1,1 @@
-<h1 align="center">HEY LETS LEARN TOGETHER ABOUT PYTHON</h1>
+<h1 align="center">HEY LETS LEARN TOGETHER ABOUT python</h1>
