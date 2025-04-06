@@ -1,0 +1,286 @@
+# No.1
+def summ(*args):
+    total = 0
+    list_number = ""
+    
+    for char in args:
+        list_number += char
+    for num in list_number:
+        total += int(num)
+    return total
+
+user_input = str(input("input some integer: (ex: 124532)\n")).replace(" ","")
+print(summ(user_input))
+// Disempurnakan //
+
+def summ(n):
+    return sum(int(digit) for digit in str(n))
+
+user_input = input("Input some integer: (ex: 124532)\n").replace(" ", "")
+print(summ(user_input))
+
+
+# No.2
+def function(number) -> list:
+    if number == 0:
+        return [0]
+    else:
+        result = [1]
+        for i in range(2,number + 1):
+            if number % i == 0:
+                result.append(i)
+        return(result)
+
+user = int(input("Input some integer:\n"))
+print(factors(user))
+
+while True:
+    user = int(input("Input some even integer:\n"))
+    if user == 1:
+        print("Its an odd integer")
+        continue
+    elif user > 1 and user % 2 == 0:
+        result = function(user)
+        print(result)
+        break
+    else:
+        print("Its and odd integer, try again!")
+        continue
+// Disempurnakan //
+def factors(n):
+    if n == 0:
+        return [0]
+    return [i for i in range(1, n+1) if n % i == 0]
+
+
+# No.3
+import os
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+# --------------------------Code Bellow-------------------------- #
+def even_number(number):
+    return number % 2 == 0 and number != 1
+
+numbers = [1, 2, 3, 4, 5, 6]
+print(f"Input: {numbers}")
+result = filter(even_number,numbers)
+print(list(result))
+# --------------------------------------------------------------- #
+input("ENTER")
+clear()
+// Disempurnakan //
+numbers = [1, 2, 3, 4, 5, 6]
+result = list(filter(lambda x: x % 2 == 0, numbers))
+print(result)
+
+
+
+No.4
+import os
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+# --------------------------Code Bellow-------------------------- #
+# Container
+numbers = []
+# Iteration for input
+for i in range(2):
+    user = int(input("Input a number:\n"))
+    numbers.append(user)
+# Program
+result = lambda x, y : x if y == 1 else x * result(x, y - 1)
+# Show Output
+print(result(numbers[0],numbers[1]))
+# --------------------------------------------------------------- #
+input("ENTER")
+clear()
+
+
+
+# No.5
+import os
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+# --------------------------Code Bellow-------------------------- #
+# Program
+def function(*args):
+    for char in (args):
+        return len(char)
+# Words List
+words = ["apple", "banana", "cherry"]
+# Show Output
+result = map(function,words)
+print(words)
+print(list(result))
+# --------------------------------------------------------------- #
+input("ENTER")
+clear()
+// Disempurnakan //
+words = ["apple", "banana", "cherry"]
+result = list(map(len, words))
+print(words)
+print(result)
+
+
+# No.6
+import os
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+# --------------------------Code Bellow-------------------------- #
+def function(a):
+    if a == 1:
+        return 1 
+    else:
+        return a * function(a - 1)
+print(function(3))
+# --------------------------------------------------------------- #
+input("ENTER")
+clear()
+// Disempurnakan //
+def factorial(n):
+    return 1 if n == 1 else n * factorial(n - 1)
+
+print(factorial(3))
+
+
+
+# No.7
+import os
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+# --------------------------Code Bellow-------------------------- #
+def fibonacci(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+user = int(input("Number:\n"))
+print(fibonacci(user))
+# --------------------------------------------------------------- #
+input("ENTER")
+clear()
+// Disempurnakan //
+from functools import lru_cache
+
+@lru_cache(None)
+def fibonacci(n):
+    return n if n < 2 else fibonacci(n - 1) + fibonacci(n - 2)
+
+user = int(input("Number:\n"))
+print(fibonacci(user))
+
+
+
+# No.8
+import os
+from functools import reduce
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+# --------------------------Code Bellow-------------------------- #
+numbers = [1, 2, 3, 4]
+result = reduce(lambda x,y: x*y, numbers)
+print(result)
+# --------------------------------------------------------------- #
+input("ENTER")
+clear()
+// Disempurnakan //
+Sudah Perfect Hehew :3
+
+
+# No.9
+import os
+from functools import reduce
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+# --------------------------Code Bellow-------------------------- #
+def temperature(celcius: float) -> float:
+    return (9/5 * celcius) + 32  
+
+print(temperature(0))
+# --------------------------------------------------------------- #
+input("ENTER")
+clear()
+// Disempurnakan //
+temperature = lambda c: (9/5 * c) + 32
+print(temperature(0))
+
+
+
+# 10
+import os
+from functools import reduce
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+# --------------------------Code Bellow-------------------------- #
+def triangle(n):
+    for i in range(1,n+1):
+        print("*" * i)
+triangle(3)
+# --------------------------------------------------------------- #
+input("ENTER")
+clear()
+// Disempurnakan //
+def triangle(n):
+    print("\n".join("*" * i for i in range(1, n+1)))
+
+triangle(3)
+
+
+
+# 11
+import os
+from functools import reduce
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+# --------------------------Code Bellow-------------------------- #
+import math 
+
+def function(a: int,b: int):
+    # absolute prime and non prime
+    prime = [2,3,5,7]
+    # Result
+    result = []
+
+    for num in range(int(a), int(b) + 1):
+        
+        if num in prime:
+            print(f"{num} Masuk list")
+            result.append(num)
+        elif num < 2:
+            print(f"{num} bukan prima")
+            continue
+        elif num % 2 == 0 or num % 3 == 0 or num % 5 == 0 or num % 7 == 0:
+            print(f"{num} Bukan Prima, ada yang bisa dibagi")
+            continue 
+        elif num % math.sqrt(num) == 0:
+            print(f"{num} bukan Prima, punya akar")
+            continue
+        else:
+            print(f"{num} termasuk prima, masuk list")
+            result.append(num)
+    return result
+
+if __name__ == "__main__":
+    while True:
+        number1 = input("Input an integer: \n")
+        number2 = input("Input an integer again: \n")
+        
+        if number1 < number2: 
+            print(function(number1,number2))
+            break
+        else:
+            print("Angka pertama harus lebih kecil dari angka kedua")
+            continue
+# --------------------------------------------------------------- #
+input("ENTER")
+clear()
